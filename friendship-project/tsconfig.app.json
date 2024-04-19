@@ -4,14 +4,17 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "src/*.vue", "../models",
+    "src/*.vue",
+    "../models",
   ],
   "exclude": [
     "src/**/__tests__/*"
   ],
   "compilerOptions": {
     "composite": true,
-    "types": ["vite/client"],
+    "types": [
+      "vite/client"
+    ],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "baseUrl": ".",
     "moduleResolution": "node",
@@ -19,10 +22,18 @@
       "@/*": [
         "./src/*"
       ],
-      "~src/*": ["./src/*"],
-      "utils": ["./src/utils"],
-      "~utils/*": ["./src/utils/*"],
-      "components": ["./src/components"],
+      "~src/*": [
+        "./src/*"
+      ],
+      "utils": [
+        "./src/utils"
+      ],
+      "~utils/*": [
+        "./src/utils/*"
+      ],
+      "components": [
+        "./src/components"
+      ],
     }
   }
 }
