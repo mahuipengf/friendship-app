@@ -12,7 +12,7 @@ axios.interceptors.request.use((config) => {
       'Access-Control-Allow-Origin': '*',// 允许跨域
     },
     baseURL: import.meta.env.Node_ENV === 'production' ? 'http://47.99.144.198:3030' : 'http://localhost:5173',
-    // baseURL: 'http://47.99.144.198:3030',
+    // baseURL: 'http://47.99.144.198:3030', // 使用app打包时使用线上服务地址
     timeout: 2000, // 设置超时时间为2s
   } as any;
 }, (err) => {
