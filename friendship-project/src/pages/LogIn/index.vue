@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { SingUp } from '@/services/auth';
 const form = reactive({
   name: '',
   password: '',
+});
+const obj = ref({
+  visible: false,
+  currentStatus: '',
 });
 
 const onLogin = () => {
@@ -16,10 +20,19 @@ const onRegister = async() => {
         username: form.name,
         password: form.password,
     }
-    await SingUp(params);
+    const data: any = await SingUp(params);
+    if (data.status === 200) {
+      obj.value.visible = true;
+      console.log('data.message', data.message)
+      obj.value.currentStatus = data.message;
+    }
+    console.log('data', data);
 }
 </script>
 <template>
+  <div>
+    <el-alert :title="`当前成功调用了接口` + obj.currentStatus" type="success" :closable="false" v-if="obj.visible" />
+  </div>
   <div class="login-box">
     <!-- <img alt="Vue logo" class="logo" src="@/assets/img/bg.jpeg" width="125" height="125" /> -->
     <el-form :model="form" label-width="auto" class="form" style="max-width: 600px">
