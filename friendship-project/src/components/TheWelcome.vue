@@ -5,9 +5,16 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+
 </script>
 
 <template>
+  <van-button type="primary">主要按钮</van-button>
+<van-button type="success">成功按钮</van-button>
+<van-button type="default">默认按钮</van-button>
+<van-button type="danger">危险按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />

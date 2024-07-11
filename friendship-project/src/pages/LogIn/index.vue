@@ -30,11 +30,10 @@ const onRegister = async() => {
 }
 </script>
 <template>
-  <div>
+  <!-- <div>
     <el-alert :title="`当前成功调用了接口` + obj.currentStatus" type="success" :closable="false" v-if="obj.visible" />
   </div>
   <div class="login-box">
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/img/bg.jpeg" width="125" height="125" /> -->
     <el-form :model="form" label-width="auto" class="form" style="max-width: 600px">
     <el-form-item>
       <el-input v-model="form.name" placeholder="账号 / 手机号" style="width: 100%;" />
@@ -45,11 +44,59 @@ const onRegister = async() => {
     <el-button type="primary" @:click="onLogin">登录</el-button>
     <el-button type="primary" @:click="onRegister">注册</el-button>
     </el-form>
-
+  </div> -->
+  <div class="container">
+    <div class="content">
+      <div class="share-img">
+        <img src="@/assets/img/home-share.svg" />
+        <div class="share-img-title">享受生活</div>
+      </div>
+      <div class="box">
+          <van-button type="danger" class="home-btn">登陆</van-button>
+          <van-button type="default" class="home-btn">先去逛逛</van-button>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <style scoped>
+
+.container {
+  background-image: url(@/assets/img/home-bg.svg);
+  width: 100vw;
+  height: 100vh;
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+.share-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.share-img-title {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.4rem;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+}
+.home-btn {
+  width: 16rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
 .login-box {
     display: flex;
     justify-content: center;

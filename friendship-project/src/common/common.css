@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 4616514 */
+    src: url('iconfont.woff2?t=1720599474552') format('woff2'),
+         url('iconfont.woff?t=1720599474552') format('woff'),
+         url('iconfont.ttf?t=1720599474552') format('truetype');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-faxian:before {
+    content: "\e608";
+  }
+  
+  .icon-faxian1:before {
+    content: "\e604";
+  }
+  
+  .icon-faxian2:before {
+    content: "\e8af";
+  }
+  
+  .icon-tongzhigonggao:before {
+    content: "\e6b9";
+  }
+  
+  .icon-tongzhi2_1:before {
+    content: "\e627";
+  }
+  
+  
+  /* 自定义icon使用 */
+
+  .iconfont-faxian:before {
+    content: "\e608";
+  }
+
+  .iconfont-faxian1:before {
+    content: "\e604";
+  }
+  
+  .iconfont-faxian2:before {
+    content: "\e8af";
+    font-size: 1.2rem;
+  }
+  
+  .iconfont-tongzhigonggao:before {
+    content: "\e6b9";
+  }
+  
+  .iconfont-tongzhi2_1:before {
+    content: "\e627";
+    font-size: 1.8rem;
+  }
+  
+  
