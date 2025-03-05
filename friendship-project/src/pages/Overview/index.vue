@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { FOOTERBAR_TYPE, FOOTERBAR_SELECTED } from '@/utils/common';
+import Instant from '@/pages/Instant/index.vue';
 
 const selected: string = ref('HOME');
 
@@ -16,11 +17,11 @@ const onSelected = (type) => {
 </script>
 <template>
   <div class="footer">
+    <div :if="selected.value === FOOTERBAR_TYPE['HOME']"><Instant /></div>
 
 
 
 
-    
     <van-action-bar>
     <van-action-bar-icon icon="wap-home-o" @click="() => onClickIcon('HOME')" :color="onSelected(FOOTERBAR_TYPE['HOME'])" />
     <van-action-bar-icon icon-prefix="iconfont" icon="faxian2"  @click="() => onClickIcon('DISCOVER')" :color="onSelected(FOOTERBAR_TYPE['DISCOVER'])" />
